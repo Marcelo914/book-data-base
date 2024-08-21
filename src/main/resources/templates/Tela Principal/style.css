@@ -1,0 +1,85 @@
+.tela-principal {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #C2AB89;
+}
+
+.top-bar {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #572A15;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    height: 50px; 
+    box-sizing: border-box; 
+}
+
+.logo {
+    display: flex;
+    align-items: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#search-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 700px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.logout-button {
+    background-color: #8B4513;
+    color: #000000;
+    border: none; /* Remover as bordas */
+    padding: 6px 15px; /* Tamanho do botão */
+    text-align: center;
+    text-decoration: none; /* Remover sublinhado */
+    display: inline-block; 
+    font-size: 20px; /* Tamanho da fonte */
+    border-radius: 50px; /* Tornar o botão oval */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+.content {
+    padding-top: 50px; /* Adiciona padding no topo para evitar sobreposição */
+    height: 2000px; /* Altura de exemplo para testar o scroll */
+}

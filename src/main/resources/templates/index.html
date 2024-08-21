@@ -3,69 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página com Bootstrap</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stilo_login.css">
+    <link rel="shortcut icon" href="../imgs/logo_bdb.png" type="image/x-icon">
+    <title>Login BDb</title>
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Minha Página</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Jumbotron -->
-    <div class="jumbotron text-center">
-        <h1 class="display-4">Bem-vindo à Minha Página!</h1>
-        <p class="lead">Esta é uma página de exemplo usando Bootstrap.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Saiba Mais</a>
-    </div>
-
-    <!-- Conteúdo Principal -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Seção 1</h2>
-                <p>Conteúdo da seção 1...</p>
-            </div>
-            <div class="col-md-4">
-                <h2>Seção 2</h2>
-                <p>Conteúdo da seção 2...</p>
-            </div>
-            <div class="col-md-4">
-                <h2>Seção 3</h2>
-                <p>Conteúdo da seção 3...</p>
-            </div>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="../imgs/logo_bdb.png" alt="logo" width="90px">
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container text-center">
-            <span class="text-muted">© 2024 Minha Página. Todos os direitos reservados.</span>
-        </div>
-    </footer>
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            
+            <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center bg-costum">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="imgs/book1.jpg" class="d-block w-10" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imgs/book2.jpg" class="d-block w-10" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imgs/book3.jpg" class="d-block w-10" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
 
-    <!-- Scripts Bootstrap e jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            
+            <div class="col-md-6 d-flex align-items-center justify-content-center bg-custom">
+                <div class="caixa-login">
+                    <div class="form-header">
+                        <button id="loginBtn" class="form-toggle active" onclick="showLogin()">LOGIN</button>
+                        <button id="registerBtn" class="form-toggle" onclick="showRegister()">CADASTRAR</button>
+                    </div>
+
+                   
+                    <form id="loginForm" class="form">
+                        <input type="text" id="username" placeholder="usuário" class="input-login" name="username" required>
+                        <input type="password" id="password" placeholder="senha" class="password-input" name="password" required>
+                        <a href="./Tela Principal/tela_principal.html" class="login-botao" id="submitLink">LOGIN</a>
+                        <div class="esqueceu-senha">
+                            <a href="./Esqueceu_senha/recuperar_senha.html">Esqueceu a senha?</a>
+                        </div>
+                    </form>
+
+                    
+                    <form id="registerForm" class="form hidden">
+                        <input type="text" placeholder="usuário" class="input-login">
+                        <input type="email" placeholder="Email" class="input-login">
+                        <input type="password" placeholder="senha" class="password-input">
+                        <input type="password" placeholder="Confirmar senha" class="password-input">
+                        <button type="submit" class="login-botao">CADASTRAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="errorPopup">
+        <span class="close">&times;</span>
+        <div class="message"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
