@@ -13,29 +13,36 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #572A15;
-    padding: 5px 20px; 
+    padding: 5px 20px;
     color: white;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
-    height: 50px; 
+    height: 50px;
     z-index: 1000;
 }
 
 .voltar_button {
     background-color: #8B4513;
     color: #000000;
-    border: none; /* Remover as bordas */
-    padding: 8px 10px; /* Tamanho do botão */
+    border: none;
+    /* Remover as bordas */
+    padding: 8px 10px;
+    /* Tamanho do botão */
     text-align: center;
-    text-decoration: none; /* Remover sublinhado */
-    display: inline-block; 
-    font-size: 20px; /* Tamanho da fonte */
-    border-radius: 50px; /* Tornar o botão oval */
-    font-weight: bold; /* Texto em negrito */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    text-decoration: none;
+    /* Remover sublinhado */
+    display: inline-block;
+    font-size: 20px;
+    /* Tamanho da fonte */
+    border-radius: 50px;
+    /* Tornar o botão oval */
+    font-weight: bold;
+    /* Texto em negrito */
+    cursor: pointer;
+    /* Cursor de ponteiro ao passar o mouse */
 }
 
 .caixa-recuperar {
@@ -79,20 +86,20 @@ body {
     align-items: center;
 }
 
-.input-senha {
+.input-email {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
     border: none;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8);
     color: #4A2C1D;
     font-size: 16px;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
 }
 
-.input-senha:focus {
+.input-email:focus {
     box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 

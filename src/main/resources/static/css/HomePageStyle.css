@@ -5,7 +5,7 @@
 }
 
 .top-bar {
-    
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,11 +14,11 @@
     color: white;
     position: fixed;
     top: 0;
-    left: 0; 
-    width: 100%; 
-    z-index: 1000; 
-    height: 50px; 
-    box-sizing: border-box; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -68,18 +68,27 @@
 .logout-button {
     background-color: #8B4513;
     color: #000000;
-    border: none; /* Remover as bordas */
-    padding: 6px 15px; /* Tamanho do botão */
+    border: none;
+    /* Remover as bordas */
+    padding: 6px 15px;
+    /* Tamanho do botão */
     text-align: center;
-    text-decoration: none; /* Remover sublinhado */
-    display: inline-block; 
-    font-size: 20px; /* Tamanho da fonte */
-    border-radius: 50px; /* Tornar o botão oval */
-    font-weight: bold; /* Texto em negrito */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    text-decoration: none;
+    /* Remover sublinhado */
+    display: inline-block;
+    font-size: 20px;
+    /* Tamanho da fonte */
+    border-radius: 50px;
+    /* Tornar o botão oval */
+    font-weight: bold;
+    /* Texto em negrito */
+    cursor: pointer;
+    /* Cursor de ponteiro ao passar o mouse */
 }
 
 .content {
-    padding-top: 50px; /* Adiciona padding no topo para evitar sobreposição */
-    height: 2000px; /* Altura de exemplo para testar o scroll */
+    padding-top: 50px;
+    /* Adiciona padding no topo para evitar sobreposição */
+    height: 2000px;
+    /* Altura de exemplo para testar o scroll */
 }

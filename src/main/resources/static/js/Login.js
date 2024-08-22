@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             errorPopup.style.display = 'none';
         });
 
-        
+
         window.addEventListener('click', function(event) {
             if (event.target === errorPopup) {
                 errorPopup.style.display = 'none';
