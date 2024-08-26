@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/css/LoginStyle.css">
+    <link rel="shortcut icon" href="../static/imgs/logo_bdb.png" type="image/x-icon">
     <link rel="stylesheet" href="css/LoginStyle.css">
     <link rel="shortcut icon" href="imgs/logo_bdb.png" type="image/x-icon">
     <title>Login BDb</title>
@@ -15,7 +18,7 @@
 
     <div class="top-bar">
         <div class="logo">
-            <img src="../imgs/logo_bdb.png" alt="logo" width="90px">
+            <img src="imgs/logo_bdb.png" alt="logo" width="90px">
         </div>
     </div>
 
@@ -56,15 +59,13 @@
                         <button id="registerBtn" class="form-toggle" onclick="showRegister()">CADASTRAR</button>
                     </div>
 
-
+                    <!-- Formulário de Login -->
                     <form id="loginForm" class="form">
-                        <input type="text" id="username" placeholder="usuário" class="input-login" name="username"
-                            required>
-                        <input type="password" id="password" placeholder="senha" class="password-input" name="password"
-                            required>
-                        <a href="./Tela Principal/tela_principal.html" class="login-botao" id="submitLink">LOGIN</a>
+                        <input type="text" id="username" placeholder="usuário" class="input-login" name="username" required>
+                        <input type="password" id="password" placeholder="senha" class="password-input" name="password" required>
+                        <button type="submit" class="login-botao" id="submitLink">LOGIN</button>
                         <div class="esqueceu-senha">
-                            <a href="./Esqueceu_senha/recuperar_senha.html">Esqueceu a senha?</a>
+                            <a href="../templates/recuperar_senha.html">Esqueceu a senha?</a>
                         </div>
                     </form>
 
