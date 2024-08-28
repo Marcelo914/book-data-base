@@ -4,9 +4,8 @@ function colecaoLivros (livros, id) {
     colecao.innerHTML += livros.map(livro => (
 	// mudar aqui as info dos livros que vão aparecer na tela
         `<div>
+	    <img height="300" width"200" src="${livro.foto}" alt="capa de ${livro.nome}">
             <h3>${livro.nome}</h3>
-            <h3>${livro.nota}</h3>
-            <h3>${livro.sinopse}</h3>
         </div>`
-    ))
+    )).join('')
 }
