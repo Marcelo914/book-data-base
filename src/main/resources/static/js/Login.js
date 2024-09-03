@@ -14,7 +14,7 @@ function showRegister() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var submitLink = document.getElementById('submitLink');
-    var usernameInput = document.getElementById('username');
+    var usernameInput = document.getElementById('email');
     var passwordInput = document.getElementById('password');
     var registerForm = document.getElementById('registerForm');
     var loginForm = document.getElementById('loginForm');
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (username === '') {
                     hasError = true;
-                    message += 'O campo "Usuário" precisa ser preenchido.<br>';
+                    message += 'O campo "Email" precisa ser preenchido.<br>';
                 }
 
                 if (email === '') {
