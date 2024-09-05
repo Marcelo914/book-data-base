@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (submitLink && usernameInput && passwordInput && errorPopup && errorMessage && closePopup) {
         submitLink.addEventListener('click', async function(event) {
-            event.preventDefault();
-
             if (loginForm.classList.contains('hidden')) {
                 // Captura os dados de cadastro
                 const username = registerForm.querySelector('input[placeholder="usuário"]').value.trim();

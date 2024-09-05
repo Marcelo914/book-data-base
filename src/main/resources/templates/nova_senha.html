@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
             <img src="../imgs/logo_bdb.png" alt="logo" width="90px">
         </div>
         <div>
-            <a href="../index.html" class="voltar_button">VOLTAR</a>
+            <a th:href="@{/Login}" class="voltar_button">VOLTAR</a>
         </div>
     </div>
 
@@ -29,7 +29,7 @@
         <form id="loginForm" class="form">
             <input type="text" placeholder="nova senha" class="input-senha">
             <input type="text" placeholder="confirmar senha" class="input-senha">
-            <a href="../index.html" class="enviar-botao">CADASTRAR SENHA</a>
+            <a th:href="@{/Login}" class="enviar-botao">CADASTRAR SENHA</a>
         </form>
     </div>
 
