@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 // Controller de rotas para a página home
 @Controller
-public class PageController {
+public class PagesController {
 
     // procura pelo arquivo Login.html
     @GetMapping("/Login")
@@ -24,7 +24,7 @@ public class PageController {
     }
 
     @GetMapping("/")
-    public String HomePage() {
+    public String HomePageLogin(){
         return "tela_principal";
     }
 }

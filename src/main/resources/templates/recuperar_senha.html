@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
             <img src="../imgs/logo_bdb.png" alt="logo" width="90px">
         </div>
         <div>
-            <a href="../index.html" class="voltar_button">VOLTAR</a>
+            <a th:href="@{/Login}" class="voltar_button">VOLTAR</a>
         </div>
     </div>
 
@@ -27,11 +27,11 @@
             <h3 class="recuperar-senha">RECUPERAR SENHA</h3>
         </div>
 
-        <form id="loginForm" class="form">
+        <form id="loginForm" class="form" th:method="get" th:action="@{/changepassword}">
             <input type="text" placeholder="email" class="input-email">
             <p class="textinho">Por favor, se você não receber o e-mail dentro de alguns minutos, verifique sua pasta de
                 spam ou entre em contato conosco para obter assistência adicional. </p>
-            <a href="../Nova Senha/nova_senha.html" class="enviar-botao">ENVIAR</a>
+            <a th:href="@{/changepassword}" class="enviar-botao">ENVIAR</a>
         </form>
     </div>
 
