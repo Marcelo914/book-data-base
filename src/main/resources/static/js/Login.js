@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (username === '') {
                     usernameInput.classList.add('error');
-                    message += 'O campo "Nome de Usuário" precisa ser preenchido.<br>';
+                    message += 'O campo "Email" precisa ser preenchido.<br>';
                     hasError = true;
                 }
 

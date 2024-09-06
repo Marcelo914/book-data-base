@@ -156,7 +156,52 @@
 }
 
 .content {
-    margin-left: 60px;
-    padding: 20px;
-    transition: margin-left 0.3s;
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os itens quebrem linha */
+    gap: 20px;  /* Espaçamento entre os livros */
+    padding: 20px;  /* Espaçamento interno em volta dos livros */
+    padding-left: 80px;  /* Adiciona espaçamento à esquerda para evitar a sobreposição da sidebar */
+    margin-top: 80px;  /* Espaçamento para baixo da barra de navegação */
+    justify-content: flex-start;  /* Alinha livros à esquerda */
+    align-content: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+/* Estilos para cada livro */
+.book-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 150px;  /* Largura reduzida para os livros */
+    text-align: center;
+    transition: transform 0.2s;
+    margin: 10px;  /* Margem para evitar que os livros fiquem grudados nas bordas */
+}
+
+.book-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para a imagem do livro */
+.book-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;  /* Borda inferior para separar a imagem do título */
+}
+
+/* Título do livro */
+.book-item h3 {
+    font-size: 16px;  /* Tamanho de fonte um pouco menor */
+    margin: 10px 0;
+    padding: 0 10px;
+    color: #333;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0; /* Espaçamento acima e abaixo do título */
+    text-align: left; /* Centraliza o título */
 }
