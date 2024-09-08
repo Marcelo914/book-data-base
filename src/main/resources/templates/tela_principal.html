@@ -36,7 +36,6 @@
         </div>
 
 
-
         <div class="search-bar">
             <input type="text" placeholder="Pesquise por um livro" id="search-input">
             <button class="search-button">
@@ -46,20 +45,22 @@
         <a th:href="@{/Login}" class="logout-button">SAIR</a>
     </div>
 
+    <div class="category-title">Minha Coleção de Livros</div> <!-- Título da categoria -->
     <div id="colecao" class="content">
+        <!-- Livros serão injetados aqui pelo JavaScript -->
     </div>
 
     <script src="js/HomePage.js"></script>
     <script>
-	const livros = [{nome: 'harry potter', foto: 'https://m.media-amazon.com/images/I/81q77Q39nEL._AC_UF894,1000_QL80_.jpg'}, {nome: 'percy jackson', foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ikkp7NiRDtPzUd8ArvowH-nPtAQLMqfcjg&s'}]
-	const colecao = document.getElementById('colecao')
-    	    colecao.innerHTML += livros.map(livro => (
-	    	// mudar aqui as info dos livros que vão aparecer na tela
-                `<div>
+        const livros = [{nome: 'harry potter', foto: 'https://m.media-amazon.com/images/I/81q77Q39nEL._AC_UF894,1000_QL80_.jpg'}, {nome: 'percy jackson', foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ikkp7NiRDtPzUd8ArvowH-nPtAQLMqfcjg&s'}]
+        const colecao = document.getElementById('colecao')
+        colecao.innerHTML += livros.map(livro => (
+            // mudar aqui as info dos livros que vão aparecer na tela
+            `<div>
 	    	    <img height="300" width"200" src="${livro.foto}" alt="capa de ${livro.nome}">
             	    <h3>${livro.nome}</h3>
         	</div>`
-    	)).join('')
+        )).join('')
     </script>
 </body>
 
