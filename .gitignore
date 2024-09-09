@@ -12,6 +12,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+bookdatabase
 
 ### IntelliJ IDEA ###
 .idea
@@ -33,4 +34,4 @@ build/
 .vscode/
 
 
-/bookdatabase
+
