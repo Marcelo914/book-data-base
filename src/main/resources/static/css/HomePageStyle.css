@@ -160,3 +160,8 @@
     padding: 20px;
     transition: margin-left 0.3s;
 }
+
+.colecao {
+    display: flex;
+    padding: 30px;
+}
