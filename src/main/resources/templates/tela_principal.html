@@ -24,8 +24,8 @@
                 <h2>Book DataBase</h2>
             </div>
             <ul class="sidebar-links">
-                <li><a href="#"><i class="fa-solid fa-house"></i><span class="sidebar-text">Home</span></a></li>
-                <li><a href="#"><i class="fa-solid fa-user"></i><span class="sidebar-text">Perfil</span></a></li>
+                <li><a th:href="@{/Login}"><i class="fa-solid fa-house"></i><span class="sidebar-text">Home</span></a></li>
+                <li><a th:href="@{/Profile}"><i class="fa-solid fa-user"></i><span class="sidebar-text">Perfil</span></a></li>
                 <li><a href="#"><i class="fa-solid fa-book-open"></i><span class="sidebar-text">Coleção</span></a></li>
                 <li><a href="#"><i class="fa-solid fa-pencil"></i><span class="sidebar-text">Editar Perfil</span></a>
                 </li>
@@ -46,7 +46,7 @@
     </div>
 
     <div class="collection-container">
-        <div class="category-title">Minha Coleção de Livros</div> <!-- Título da categoria -->
+        <div class="category-title">Fantasia</div> <!-- Título da categoria -->
         <div id="colecao" class="book-item">
             <!-- Livros serão injetados aqui pelo JavaScript -->
         </div>
@@ -61,7 +61,7 @@
         colecao.innerHTML += livros.map(livro => (
             // mudar aqui as info dos livros que vão aparecer na tela
             `<div>
-	    	    <img height="300" width"200" src="${livro.foto}" alt="capa de ${livro.nome}">
+	    	    <img src="${livro.foto}" alt="capa de ${livro.nome}">
             	    <h3>${livro.nome}</h3>
         	</div>`
         )).join('')
