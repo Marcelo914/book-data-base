@@ -27,4 +27,9 @@ public class PagesController {
     public String HomePageLogin(){
         return "tela_principal";
     }
+
+    @GetMapping("/Profile")
+    public String Profile(){
+        return "perfil";
+    }
 }

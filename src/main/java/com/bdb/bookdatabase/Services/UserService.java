@@ -4,29 +4,22 @@ package com.bdb.bookdatabase.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import com.bdb.bookdatabase.Repository;
+import com.bdb.bookdatabase.UserRepository;
 import com.bdb.bookdatabase.model.User;
+import com.bdb.bookdatabase.DTO.UserDTO;
 
 @Service
 public class UserService {
 
     @Autowired
-    private Repository userRepository;
+    private UserRepository userRepository;
 
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
+    public void saveUser(UserDTO userDto) {
+        User user = new User();
+        user.setName(userDto.getName());
+        user.setEmail(userDto.getEmail());
+        user.setPassword(userDto.getPassword());
 
-    public User getUserById(Long id) {
-        return userRepository.findById(id).orElse(null);
-    }
-
-    public User saveUser(User name) {
-        return userRepository.save(name);
-    }
-
-    public void deleteUser(Long id) {
-        userRepository.deleteById(id);
+        userRepository.save(user);
     }
 }

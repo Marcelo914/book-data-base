@@ -59,8 +59,9 @@
                         <button id="registerBtn" class="form-toggle" onclick="showRegister()">CADASTRAR</button>
                     </div>
 
+                    <!-- Ajax aqui para executar a request sem redirecionar a página  -->
                     <!-- Formulário de Login -->
-                    <form id="loginForm" class="form" th:action="@{/}" th:method="post">
+                    <form id="loginForm" class="form" th:action="@{/login}" th:method="post">
                         <input type="email" id="email" placeholder="email" class="input-login" name="email" required>
                         <input type="password" id="password" placeholder="senha" class="password-input" name="password"
                             required>
@@ -70,11 +71,11 @@
                         </div>
                     </form>
 
-
-                    <form id="registerForm" class="form hidden">
-                        <input type="text" placeholder="usuário" class="input-login">
-                        <input type="email" placeholder="Email" class="input-login">
-                        <input type="password" placeholder="senha" class="password-input">
+                    <!-- Ajax aqui para executar a request sem redirecionar a página  -->
+                    <form id="registerForm" th:action="@{/register}" th:method="post" class="form hidden">
+                        <input type="text" placeholder="usuário" name="name" class="input-login">
+                        <input type="email" placeholder="Email" name="email" class="input-login">
+                        <input type="password" placeholder="senha" name="password" class="password-input">
                         <input type="password" placeholder="Confirmar senha" class="password-input">
                         <button type="submit" class="login-botao">CADASTRAR</button>
                     </form>
