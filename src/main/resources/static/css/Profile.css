@@ -1,11 +1,155 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Estilos gerais */
+.tela-principal {
+    min-height: 100vh;
     margin: 0;
+    font-family: Arial, sans-serif;
     background-color: #C2AB89;
 }
 
-/* Em execução */
+.logout-button {
+    text-decoration: none;
+}
+
+/* Barra superior */
+.top-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #572A15;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    background-color: #3A1D0F;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar-header img {
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover .sidebar-header img {
+    width: 70px;
+}
+
+.sidebar-header h2 {
+    color: white;
+    font-size: 1rem;
+    display: none;
+}
+
+.sidebar:hover .sidebar-header h2 {
+    display: block;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    width: 100%;
+}
+
+.sidebar-links li {
+    padding: 10px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-links li i {
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.sidebar-links li .sidebar-text {
+    margin-left: 10px;
+    display: none;
+}
+
+.sidebar:hover .sidebar-links li .sidebar-text {
+    display: inline;
+}
+
+.sidebar-links li a:hover {
+    background-color: #6B3A28;
+    border-radius: 4px;
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 800px;
+    margin-left: 250px;
+}
+
+#search-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 100%;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Logout button */
+.logout-button {
+    background-color: #8B4513;
+    color: #000000;
+    border: none;
+    padding: 6px 15px;
+    font-size: 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+

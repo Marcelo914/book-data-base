@@ -15,9 +15,41 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Book DataBase Perfil</title>
 </head>
-<body>
+<body class="tela-principal">
     
- <!-- Em execução -->
+    <div class="top-bar">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="../imgs/logo_bdb.png" alt="logo">
+                <h2>Book DataBase</h2>
+            </div>
+            <ul class="sidebar-links">
+                <li><a th:href="@{/}"><i class="fa-solid fa-house"></i><span class="sidebar-text">Home</span></a></li>
+                <li><a th:href="@{/Profile}"><i class="fa-solid fa-user"></i><span class="sidebar-text">Perfil</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-book-open"></i><span class="sidebar-text">Coleção</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-pencil"></i><span class="sidebar-text">Editar Perfil</span></a>
+                </li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i><span class="sidebar-text">Configurações</span></a></li>
+                <li><a th:href="@{/Login}"><i class="fa-solid fa-right-from-bracket"></i><span
+                            class="sidebar-text">Logout</span></a></li>
+            </ul>
+        </div>
+
+
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquise por um livro" id="search-input">
+            <button class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <a th:href="@{/}" class="logout-button">VOLTAR</a>
+    </div>
+
+    <div class="foto">
+        <img src="" alt="Foto de Perfil">
+    </div>
+      
+    
 
 </body>
 </html>
