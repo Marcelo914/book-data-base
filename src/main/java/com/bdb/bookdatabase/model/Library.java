@@ -21,6 +21,8 @@ public class Library {
     @JoinColumn(name = "book_id")
     private Book book;
 
+    private String status;
+
     public Long getId() {
         return id;
     }
@@ -45,4 +47,11 @@ public class Library {
         this.book = book;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
