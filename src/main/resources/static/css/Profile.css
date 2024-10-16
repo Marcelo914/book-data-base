@@ -4,6 +4,8 @@
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #C2AB89;
+    padding-top: 60px;
+    padding-left: 60px;
 }
 
 .logout-button {
@@ -158,3 +160,56 @@
     cursor: pointer;
 }
 
+    #Layer_1 {
+        width: 120px;
+        margin-top: 7px;
+        margin-left: 20px;
+        border-radius: 20px;
+        border: grey;
+        border-style: solid;
+    }
+
+    .img_nome{
+        display: flex;
+        align-items: center;
+        margin-right: 900px;
+        margin-left: 3px;
+    }
+
+    #nome_img{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 10px;
+        color: black;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    .tabela-tags {
+        width: 50%;
+        margin-left: 25px;
+        margin-top: 25px;
+        border-collapse: collapse;
+    }
+    
+    .linha-table {
+        padding: 10px; 
+        border: 1px solid #9E806F; 
+        display: flex; 
+        align-items: center; 
+        margin-right: 360px;
+    }
+    
+    .icon {
+        width: 30px; 
+        height: 30px; 
+        margin-right: 10px; 
+    }
+    
+    .numero {
+        margin-left: auto; 
+        font-weight: bold; 
+    }
+
+    #tag2{
+        
+    }

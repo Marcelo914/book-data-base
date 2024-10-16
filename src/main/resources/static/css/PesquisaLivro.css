@@ -4,6 +4,8 @@
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #C2AB89;
+    padding-top: 60px;
+    padding-left: 60px;
 }
 
 .logout-button {
@@ -160,8 +162,8 @@
 
 /* Estilos da coleção */
 .collection-container {
-    margin-left: 150px;
-    margin-top: 70px;
+    margin-left: 30px;
+    margin-top: 30px;
     max-width: 1100px;
     padding: 20px;
     padding-top: 0px;
