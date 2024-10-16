@@ -136,10 +136,9 @@
 .search-button {
     background: none;
     border: none;
-    color: inherit;
+    color: white;
     cursor: pointer;
     font-size: 18px;
-    text-decoration: none;
 }
 
 .fa-solid, fa-magnifying-glass{

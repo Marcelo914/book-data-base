@@ -141,6 +141,11 @@
     font-size: 18px;
 }
 
+.fa-solid, fa-magnifying-glass{
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Logout button */
 .logout-button {
     background-color: #8B4513;

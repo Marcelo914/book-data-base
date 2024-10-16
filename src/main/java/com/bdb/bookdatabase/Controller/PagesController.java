@@ -32,4 +32,9 @@ public class PagesController {
     public String Profile(){
         return "perfil";
     }
+
+    @GetMapping("/SearchBook")
+    public String SearchBook(){
+        return "pesquisa_livro";
+    }
 }
