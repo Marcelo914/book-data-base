@@ -4,7 +4,7 @@ package com.bdb.bookdatabase.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bdb.bookdatabase.UserRepository;
+import com.bdb.bookdatabase.Repository.UserRepository;
 import com.bdb.bookdatabase.model.User;
 import com.bdb.bookdatabase.DTO.UserDTO;
 
