@@ -240,7 +240,7 @@ fa-magnifying-glass {
 
 /* Título da categoria */
 .titulo-categoria {
-    width: 100%;
+    width: 102%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(103, 42, 21, 40%);
     font-size: 28px;
@@ -258,7 +258,7 @@ fa-magnifying-glass {
 .book-item {
     display: flex;
     gap: 20px;  /* Espaçamento entre os itens */
-    justify-content: flex-start;  /* Alinha os itens à esquerda */
+    justify-content: space-around;  /* Alinha os itens à esquerda */
     overflow-x: auto;
 }
 
