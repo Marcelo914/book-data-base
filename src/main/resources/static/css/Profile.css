@@ -233,7 +233,6 @@ fa-magnifying-glass {
     top: 0; /* Alinha ao topo */
     left: 250px; /* Ajuste a largura de acordo com a sua barra lateral */
     max-width: calc(100% - 250px); /* Deixa espaço para a barra lateral */
-    padding: 20px;
     background-color: rgba(170, 150, 121, 0.7);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -241,6 +240,7 @@ fa-magnifying-glass {
 
 /* Título da categoria */
 .titulo-categoria {
+    width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(103, 42, 21, 40%);
     font-size: 28px;

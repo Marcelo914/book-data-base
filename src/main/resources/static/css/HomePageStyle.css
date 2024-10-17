@@ -165,7 +165,7 @@
 .collection-container {
     margin-left: 30px;
     margin-top: 30px;
-    max-width: 83%;
+    max-width: 95%;
     padding: 20px;
     padding-top: 0px;
     background-color: rgb(170, 150, 121, 0.7);
@@ -192,7 +192,7 @@
 .book-item {
     display: flex;
     gap: 20px;  /* Espaçamento entre os itens */
-    justify-content: flex-start;  /* Alinha os itens à esquerda */
+    justify-content: space-around;  /* Alinha os itens à esquerda */
     overflow-x: auto;
 }
 
