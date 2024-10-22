@@ -11,15 +11,16 @@ import java.util.Optional;
 public class BookService {
     @Autowired
     private BookRepository bookRepository;
-
+    //função para salvar o livro
     public Book saveBook(Book book){
         return bookRepository.save(book);
     }
     
+    //le todos os livros pelo id
     public Optional<Book> searchBookById(String id){
         return bookRepository.findById(id);
     }
-
+    //deletar pelo id
     public boolean deleteBook(String id){
         if (bookRepository.existsById(id)) {
             bookRepository.deleteById(id);

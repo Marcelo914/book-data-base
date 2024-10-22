@@ -22,7 +22,8 @@ public class SearchController {
     }
 
     @PostMapping("/search")
-    public Map<String, Object> searchBook(@RequestBody String query) {
+    public Map<String, Object> searchBook(@RequestBody Map<String, String> payload) {
+        String query = payload.get("query");
         String searchResult = bookApiService.searchBooks(query);
         Map<String, Object> resultMap = null;
         try {

@@ -22,12 +22,14 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
+    // Recebe um livros via post e salva ele no banco de dados
     @PostMapping
     public ResponseEntity<Book> createBook(@RequestBody Book book) {
         Book newBook = bookService.saveBook(book);
         return new ResponseEntity<>(newBook, HttpStatus.CREATED);
     }
 
+    //busca livros pelo id 
     @GetMapping("/{id}")
     public ResponseEntity<Book> searchBookById(@PathVariable String id){
         Optional<Book> book = bookService.searchBookById(id);
@@ -35,6 +37,7 @@ public class BookController {
         .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    // deleta livros pelo id
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBook(@PathVariable String id){
         boolean deleted = bookService.deleteBook(id);

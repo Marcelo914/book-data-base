@@ -1,9 +1,5 @@
-const searchButton = document.querySelector('.search-button')
-const searchInput = document.getElementById('search-input')
-const colecaoContainer = document.getElementById('colecao')
-
 function displayBooks(books) {
-    const colecaoContainer = document.getElementById('colecao')
+    const colecaoContainer = document.getElementById('results')
     colecaoContainer.innerHTML = '';
 
     books.forEach(book => {
@@ -28,26 +24,24 @@ function displayBooks(books) {
     });
 }
 
-document.querySelector('.search-button').addEventListener('click', function() {
-    var query = document.getElementById('search-input').value;
-
-    fetch('http://localhost:8080/search', {
+async function searchBook(query) {
+    fetch("http://localhost:8080/search", {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
         },
         body: JSON.stringify({ query: query })
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            if (data.items) {
+            if (data.items && data.length > 0) {
                 displayBooks(data.items)
             } else {
-                document.getElementById('colecao').innerHTML = "Nenhum resultado encontrado"
+                console.log("nenhum livro encontrado")
             }
         })
         .catch(error => {
-            console.error('Erro: ', error);
-        });
-});
+            console.error("erro ao buscar livros: ", error);
+        })
+}
+
