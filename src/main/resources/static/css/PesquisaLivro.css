@@ -172,7 +172,7 @@
     padding-bottom: 15px;
     margin-left: 30px;
     margin-top: 30px;
-    max-width: 95%;
+    width: 95%;
     padding: 20px;
     padding-top: 0px;
     background-color: rgb(170, 150, 121, 0.7);
@@ -184,7 +184,7 @@
 .titulo-categoria {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(103, 42, 21, 40%);
-    font-size: 28px;
+    font-size: 20px;
     border-radius: 10px 10px 0px 0px;
     font-weight: bold;
     color: #ffffff;
@@ -192,14 +192,18 @@
     text-align: left;
     position: relative;
     left: -20px;
+    margin-right: -100%;
 }
 
 /* Estilo do layout e itens dos livros */
 .book-item {
-    display: flex;
-    gap: 20px;  /* Espaçamento entre os itens */
-    justify-content: center;  /* Alinha os itens à esquerda */
-    padding-bottom: 15px; /* Evita o corte na parte inferior das capas */
+    display: inline-block;
+    vertical-align: top;
+    gap: 20px;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .book-item div {
@@ -211,7 +215,7 @@
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
     margin: 12px;
-    display: inline-block; /* Mantém os itens inline */
+    display: inline-block;
 }
 
 .book-item div:hover {
@@ -255,10 +259,14 @@
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+   width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #faecd7fd;
-    border-radius: 5px;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 6px;
 }
