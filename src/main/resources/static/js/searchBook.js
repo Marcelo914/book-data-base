@@ -44,4 +44,3 @@ async function searchBook(query) {
             console.error("erro ao buscar livros: ", error);
         })
 }
-

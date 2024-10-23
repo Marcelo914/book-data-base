@@ -14,7 +14,7 @@
 
 /* Barra superior */
 .top-bar {
-    height: 50px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -155,16 +155,24 @@
     border: none;
     padding: 6px 15px;
     font-size: 20px;
-    border-radius: 50px;
+    border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.logout-button:hover {
+    background-color: #974a13;
 }
 
 /* Estilos da coleção */
 .collection-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 15px;
     margin-left: 30px;
     margin-top: 30px;
-    max-width: 1100px;
+    max-width: 95%;
     padding: 20px;
     padding-top: 0px;
     background-color: rgb(170, 150, 121, 0.7);
@@ -181,40 +189,41 @@
     font-weight: bold;
     color: #ffffff;
     padding: 5px 20px;
-    margin: 20px 0;
-    margin-left: -20px;
-    margin-right: -20px;
     text-align: left;
+    position: relative;
+    left: -20px;
 }
 
 /* Estilo do layout e itens dos livros */
 .book-item {
     display: flex;
     gap: 20px;  /* Espaçamento entre os itens */
-    justify-content: flex-start;  /* Alinha os itens à esquerda */
-    overflow-x: auto;
+    justify-content: center;  /* Alinha os itens à esquerda */
+    padding-bottom: 15px; /* Evita o corte na parte inferior das capas */
 }
 
 .book-item div {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 150px;
+    width: 180px;
+    height: 320px;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.3s;
-    margin: 10px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    margin: 12px;
     display: inline-block; /* Mantém os itens inline */
 }
 
 .book-item div:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para a imagem do livro */
 .book-item img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     border-bottom: 1px solid #ddd;
     border-radius: 8px 8px 0 0;
     cursor: pointer;
@@ -222,10 +231,12 @@
 
 /* Título do livro */
 .book-item h3 {
-    font-size: 16px;
+    font-size: 14px;
     margin: 10px 0;
     padding: 0 10px;
     color: #333;
+    overflow: hidden; /* Para evitar que títulos longos quebrem o layout */
+    text-overflow: ellipsis; /* Adiciona reticências em títulos longos */
 }
 
 /* Responsividade */
@@ -243,8 +254,11 @@
     }
 }
 
-.maisColecao {
-    width: 120px;
-    border-radius: 15px;
-    background-color: rgb(103, 42, 21, 20%);
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #faecd7fd;
+    border-radius: 5px;
 }
