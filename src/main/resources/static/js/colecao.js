@@ -1,5 +1,5 @@
 // uma função que recebe ua lista de livros e o id da tag em html pra colocar a lista
-export default function colecaoLivros (livros, id) {
+function colecaoLivros () {
     const livros = [{nome: 'Harry Potter', foto: 'https://m.media-amazon.com/images/I/81q77Q39nEL._AC_UF894,1000_QL80_.jpg'}, 
         {nome: 'Percy Jackson', foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ikkp7NiRDtPzUd8ArvowH-nPtAQLMqfcjg&s'},
         {nome: 'O Hobbit', foto: 'https://m.media-amazon.com/images/I/511+-lOOtsL._SY445_SX342_.jpg'}, 
@@ -15,3 +15,4 @@ export default function colecaoLivros (livros, id) {
         )).join('')
         colecao.innerHTML += `<button class="maisColecao" type="button">MAIS DA CATEGORIA</button>`
 }
+    colecaoLivros()

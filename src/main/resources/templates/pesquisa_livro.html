@@ -29,12 +29,13 @@
                 <li><a href="#"><i class="fa-solid fa-book-open"></i><span class="sidebar-text">Coleção</span></a></li>
                 <li><a href="#"><i class="fa-solid fa-pencil"></i><span class="sidebar-text">Editar Perfil</span></a>
                 </li>
+                <li><a href="#"><i class="fa-solid fa-plus"></i><span class="sidebar-text">Adicionar Livro</span></a>
+                </li>
                 <li><a href="#"><i class="fa-solid fa-gear"></i><span class="sidebar-text">Configurações</span></a></li>
                 <li><a th:href="@{/Login}"><i class="fa-solid fa-right-from-bracket"></i><span
                             class="sidebar-text">Logout</span></a></li>
             </ul>
         </div>
-
 
         <div class="search-bar">
             <input type="text" placeholder="Pesquise por um livro" id="search-input">
@@ -48,12 +49,11 @@
     <div class="collection-container">
             <p class="titulo-categoria">Resultado Pesquisa</p> <!-- Título da categoria -->
         <div id="colecao" class="book-item">
-                <script src="js/searchBook.js"></script>
+            <script src="js/SearchBook.js"></script>
         </div>
     </div>
     
-
-    <script src="js/HomePage.js"></script>
+    <script src="js/HomePage.js"></script>  
 </body>
 
 </html>

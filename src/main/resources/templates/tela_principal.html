@@ -17,32 +17,9 @@
 </head>
 
 <body class="tela-principal">
-    <div class="top-bar">
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <img src="../imgs/logo_bdb.png" alt="logo">
-                <h2>Book DataBase</h2>
-            </div>
-            <ul class="sidebar-links">
-                <li><a th:href="@{/}"><i class="fa-solid fa-house"></i><span class="sidebar-text">Home</span></a></li>
-                <li><a th:href="@{/Profile}"><i class="fa-solid fa-user"></i><span class="sidebar-text">Perfil</span></a></li>
-                <li><a href="#"><i class="fa-solid fa-book-open"></i><span class="sidebar-text">Coleção</span></a></li>
-                <li><a href="#"><i class="fa-solid fa-pencil"></i><span class="sidebar-text">Editar Perfil</span></a>
-                </li>
-                <li><a href="#"><i class="fa-solid fa-gear"></i><span class="sidebar-text">Configurações</span></a></li>
-                <li><a th:href="@{/Login}"><i class="fa-solid fa-right-from-bracket"></i><span
-                            class="sidebar-text">Logout</span></a></li>
-            </ul>
-        </div>
-
-
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquise por um livro" id="search-input">
-            <button class="search-button">
-                <a th:href="@{/SearchBook}" class="fa-solid fa-magnifying-glass"></a>
-            </button>
-        </div>
-        <a th:href="@{/Login}" class="logout-button">SAIR</a>
+    
+    <div id="layout-container">
+        <script th:src="@{'/js/layout.js'}"></script>
     </div>
 
     <div class="collection-container">
@@ -52,24 +29,9 @@
         </div>
     </div>
     
-
-    <script src="../static/js/colecao.js"></script>
-    <script>
-        const livros = [{nome: 'Harry Potter', foto: 'https://m.media-amazon.com/images/I/81q77Q39nEL._AC_UF894,1000_QL80_.jpg'}, 
-        {nome: 'Percy Jackson', foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ikkp7NiRDtPzUd8ArvowH-nPtAQLMqfcjg&s'},
-        {nome: 'O Hobbit', foto: 'https://m.media-amazon.com/images/I/511+-lOOtsL._SY445_SX342_.jpg'}, 
-        {nome: 'O Senhor dos Aneis', foto: 'https://m.media-amazon.com/images/I/41RBd2DvmgL._SY445_SX342_.jpg'},
-        {nome: 'Alice no País das Maravilhas', foto: 'https://m.media-amazon.com/images/I/51IrLZVGXuL._SY445_SX342_.jpg'}]
-        const colecao = document.getElementById('colecao')
-        colecao.innerHTML += livros.map(livro => (
-            // mudar aqui as info dos livros que vão aparecer na tela
-            `<div>
-	    	    <img src="${livro.foto}" alt="capa de ${livro.nome}">
-            	    <h3>${livro.nome}</h3>
-        	</div>`
-        )).join('')
-        colecao.innerHTML += `<button class="maisColecao" type="button">MAIS DA CATEGORIA</button>`
-    </script>
+    
+    <script th:src="@{'/js/colecao.js'}"></script>
+   
 </body>
 
 </html>

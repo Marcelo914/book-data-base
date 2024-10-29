@@ -37,4 +37,9 @@ public class PagesController {
     public String SearchBook(){
         return "pesquisa_livro";
     }
+
+    @GetMapping("/Layout")
+    public String Layout(){
+        return "layout";
+    }
 }
