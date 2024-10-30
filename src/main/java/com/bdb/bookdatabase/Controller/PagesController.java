@@ -38,8 +38,13 @@ public class PagesController {
         return "pesquisa_livro";
     }
 
-    @GetMapping("/Layout")
+    @GetMapping("/Layout") //Página criada para linkar com o JS e aparecer nas telas. NÃO APAGAR!!
     public String Layout(){
         return "layout";
+    }
+
+    @GetMapping("/AddBook") //Página criada para linkar com o JS e aparecer nas telas. NÃO APAGAR!!
+    public String AddBook(){
+        return "addBook";
     }
 }
