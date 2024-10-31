@@ -31,11 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
-<<<<<<< HEAD
-application.properties
 
-=======
-
-applicatoin.properties
->>>>>>> 5e6055e (mysql and gitignore)
+/src/main/resources/application.properties
 
