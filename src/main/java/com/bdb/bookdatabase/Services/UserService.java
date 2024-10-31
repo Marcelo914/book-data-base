@@ -1,4 +1,3 @@
-// Simple user crud example
 package com.bdb.bookdatabase.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +20,9 @@ public class UserService {
         user.setPassword(userDto.getPassword());
 
         userRepository.save(user);
+    }
+
+    public User findUserById(Long id){
+        return userRepository.findById(id).orElse(null);
     }
 }

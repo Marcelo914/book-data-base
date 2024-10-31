@@ -35,10 +35,10 @@ public class LoginController {
         User user = userRepository.findByEmail(loginUser.getEmail());
 
         if (user == null || !user.getPassword().equals(loginUser.getPassword())) {
-            return new ResponseEntity<>("Usuário ou senha invalido.", HttpStatus.UNAUTHORIZED);
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Email ou senha incorretos");
         }
-
         HttpHeaders headers = new HttpHeaders();
+
         headers.add("Location", "/");
         return new ResponseEntity<>(headers, HttpStatus.FOUND); // Status 302 (FOUND) redireciona para a nova URL
     }

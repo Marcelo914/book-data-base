@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 username: username,
                                 email: email,
                                 password: password,
-                            }),
+                            })
                         });
 
                         const result = await response.json();

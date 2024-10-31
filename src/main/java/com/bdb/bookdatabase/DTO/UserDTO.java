@@ -2,9 +2,18 @@ package com.bdb.bookdatabase.DTO;
 
 public class UserDTO {
     private String name;
+    private Long id;
     private String email;
     private String password;
     private String confirmPassword;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
