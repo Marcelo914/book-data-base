@@ -1,6 +1,5 @@
 /* Estilos gerais */
 .tela-principal {
-    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #C2AB89;
@@ -8,91 +7,122 @@
     padding-left: 60px;
 }
 
-/* Estilos da coleção */
-.collection-container {
-    margin-left: 30px;
-    margin-top: 30px;
-    max-width: 95%;
-    padding: 20px;
-    padding-top: 0px;
-    background-color: rgb(170, 150, 121, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Título da categoria */
-.titulo-categoria {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(103, 42, 21, 40%);
-    font-size: 28px;
-    border-radius: 10px 10px 0px 0px;
-    font-weight: bold;
-    color: #ffffff;
-    padding: 5px 20px;
-    margin: 20px 0;
-    margin-left: -20px;
-    margin-right: -20px;
-    text-align: left;
-}
-
-/* Estilo do layout e itens dos livros */
-.book-item {
+.form-container {
     display: flex;
-    gap: 20px;  /* Espaçamento entre os itens */
-    justify-content: space-around;  /* Alinha os itens à esquerda */
-    overflow-x: auto;
-}
-
-.book-item div {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.3s;
-    margin: 10px;
-    display: inline-block; /* Mantém os itens inline */
-}
-
-.book-item div:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para a imagem do livro */
-.book-item img {
+    justify-content: center;
     width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    border-radius: 8px 8px 0 0;
+}
+
+.form-card {
+    background-color: #d6c3a7;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90vw;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #8b5e34;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    padding: 8px;
+    border: 1px solid #8b5e34;
+    border-radius: 4px;
+    background-color: #f8f3eb;
+}
+
+.additional-section {
+    display: flex;
+    margin-top: 20px;
+
+}
+
+.additional-section .form-group {
+    margin-bottom: 15px;
+}
+
+.cover-placeholder {
+    width: 120px;
+    height: 160px;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #8b5e34;
+    color: #8b5e34;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.cover-placeholder .plus-icon {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.small-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 140px);
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    font-size: 29px;
+    color: #ccc;
     cursor: pointer;
 }
 
-/* Título do livro */
-.book-item h3 {
+.star.selected {
+    color: #ffa500;
+}
+
+.submit-button {
+    background-color: #8b5e34;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
     font-size: 16px;
-    margin: 10px 0;
-    padding: 0 10px;
-    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .collection-container {
-        margin: 50px 10px;
-    }
-
-    .book-item {
-        justify-content: center;
-    }
-
-    .book-item div {
-        width: 120px;
-    }
+.submit-button:hover {
+    background-color: #704c2f;
 }
 
-.maisColecao {
-    width: 120px;
-    border-radius: 15px;
-    background-color: rgb(103, 42, 21, 20%);
+.large-textareas {
+    margin-top: 20px;
+}
+
+.large-textareas .form-group {
+    margin-top: 10px;
+}
+
+.large-textareas textarea {
+    resize: none;
 }

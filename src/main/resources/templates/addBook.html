@@ -18,12 +18,94 @@
 
 <body class="tela-principal">
     
+    <!--Top Bar e Side Bar-->
     <div id="layout-container">
         <script th:src="@{'/js/layout.js'}"></script>
     </div>
 
-    
-   
+    <main class="form-container">
+        <div class="form-card">
+
+            <div class="cover-placeholder" id="cover-placeholder">
+                <span>Adicionar Capa</span>
+                <span class="plus-icon">+</span>
+            </div>
+
+            <!-- Bloco com os detalhes principais -->
+            <div class="details-section">
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo">
+                </div>
+                <div class="form-group">
+                    <label for="editora">Editora:</label>
+                    <input type="text" id="editora">
+                </div>
+                <div class="form-group">
+                    <label for="autor">Autor(a) do livro:</label>
+                    <input type="text" id="autor">
+                </div>
+                <div class="form-group">
+                    <label for="paginas">Número de páginas:</label>
+                    <input type="number" id="paginas">
+                </div>
+                <div class="form-group">
+                    <label for="serie">Série:</label>
+                    <input type="text" id="serie">
+                </div>
+                <div class="form-group">
+                    <label for="volume">Volume:</label>
+                    <input type="text" id="volume">
+                </div>
+            </div>
+
+            <div class="large-textareas">
+                <div class="form-group">
+                    <label for="resenha">Resenha:</label>
+                    <textarea id="resenha" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="sinopse">Sinopse do livro:</label>
+                    <textarea id="sinopse" rows="3"></textarea>
+                </div>
+            </div>
+
+             <!-- Bloco com a capa e campos adicionais -->
+             <div class="additional-section">
+                <div class="small-fields">
+                    <div class="form-group">
+                        <label for="tags">Adicionar Tag:</label>
+                        <select name="tags" id="tags">
+                            <option value="0">Selecione Uma Opção</option>
+                            <option value="1">Lido</option>
+                            <option value="2">Não Lido</option>
+                            <option value="3">Quero Ler</option>
+                            <option value="4">Quero Comprar</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="anoLido">Ano Lido:</label>
+                        <input type="number" id="anoLido" min="0" max="2100">
+                    </div>
+                    <div class="form-group rating">
+                        <label>Nota:</label>
+                        <div class="stars">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+                    </div>
+                    <button type="button" class="submit-button">Enviar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script th:src="@{'/js/addBook.js'}"></script>
 </body>
 
 </html>
