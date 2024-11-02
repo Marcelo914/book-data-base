@@ -22,6 +22,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.cover-and-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
 .details-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -57,8 +64,8 @@
 }
 
 .cover-placeholder {
-    width: 120px;
-    height: 160px;
+    width: 150px;
+    height: 210px;
     background-color: #ccc;
     display: flex;
     flex-direction: column;
@@ -70,7 +77,8 @@
     text-align: center;
     font-size: 16px;
     position: relative;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 20px;
 }
 
 .cover-placeholder .plus-icon {
@@ -79,7 +87,7 @@
 }
 
 .small-fields {
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     justify-content: space-between;
     width: calc(100% - 140px);
