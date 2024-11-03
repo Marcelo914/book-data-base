@@ -47,4 +47,9 @@ public class PagesController {
     public String AddBook(){
         return "addBook";
     }
+
+    @GetMapping("/Coleção")
+    public String Colecao(){
+        return "colecao";
+    }
 }

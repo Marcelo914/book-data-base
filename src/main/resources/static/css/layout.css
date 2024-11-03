@@ -31,6 +31,21 @@
     color: #fff;
   }
 
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+  
+  .checkbox {
+    display: none;
+  }
+  
+  .fa-moon {
+    color: #fff;
+  }
+  
+  .fa-sun {
+    color: yellow;
+  }
 
 
 /* Barra superior */
@@ -48,6 +63,11 @@
     width: 100%;
     z-index: 1000;
 }
+
+.dark {
+    background-color: #333;
+    color: #fff;
+  }
 
 /* Sidebar */
 .sidebar {
@@ -181,3 +201,4 @@
     font-weight: bold;
     cursor: pointer;
 }
+
