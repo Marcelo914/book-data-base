@@ -43,7 +43,7 @@ public class PagesController {
         return "layout";
     }
 
-    @GetMapping("/AddBook") //Página criada para linkar com o JS e aparecer nas telas. NÃO APAGAR!!
+    @GetMapping("/AddBook")
     public String AddBook(){
         return "addBook";
     }

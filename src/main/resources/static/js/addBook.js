@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
     // Função para selecionar a capa do livro
     const coverPlaceholder = document.getElementById("cover-placeholder");
     coverPlaceholder.addEventListener("click", () => {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         input.click();
     });
+
 
     // Função para avaliação com estrelas
     const stars = document.querySelectorAll(".star");

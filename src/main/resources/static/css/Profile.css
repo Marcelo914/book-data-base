@@ -73,18 +73,17 @@
 
 /* Estilos da coleção */
 .collection-container {
-    position: fixed;
+    position: static;
     width: 60%;
-    background-color: rgba(138, 122, 99, 0.7);
+    background-color: #c8a67d;
     border-radius: 0px, 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     left: 35%;
-    bottom: 35%;
+    
 }
 
 /* Título da categoria */
 .titulo-categoria {
-    position: absolute;
     bottom: 100%;
     width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -104,6 +103,7 @@
     gap: 20px;  /* Espaçamento entre os itens */
     justify-content: space-around;  /* Alinha os itens à esquerda */
     overflow-x: auto;
+    padding-bottom: 10px;
 }
 
 .book-item div {
@@ -155,7 +155,12 @@
 }
 
 .maisColecao {
+  margin-top: 10px;
+  margin-right: 10px;
+  display: block;
   width: 120px;
+  height: 295px;
+  font-size: 16px;
   border-radius: 15px;
   background-color: rgb(103, 42, 21, 20%);
 }
