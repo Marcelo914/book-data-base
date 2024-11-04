@@ -17,7 +17,7 @@ async function userName(id){
 
         console.log(`User Id: ${user_id}, User Name: ${user_name}`)
     }catch(error){
-        console.error(error)
+        console.error(error);
     }
 }
 userName(1)

@@ -22,12 +22,42 @@
         <script th:src="@{'/js/layout.js'}"></script>
     </div>
 
-    <div class="propaganda">
-        EXEMPLO
+    <div class="carousel-container">
+        <!-- Slides do carrossel -->
+        <div class="carousel-slide active-slide"> <!-- Slide 1 -->
+            <h2>Slide 1</h2>
+            <p>Conteúdo do primeiro slide.</p>
+        </div>
+        <div class="carousel-slide"> <!-- Slide 2 -->
+            <h2>Slide 2</h2>
+            <p>Conteúdo do segundo slide.</p>
+        </div>
+        <div class="carousel-slide"> <!-- Slide 3 -->
+            <h2>Slide 3</h2>
+            <p>Conteúdo do terceiro slide.</p>
+        </div>
+
+        <!--Ponto de navegação-->
+        <div class="Pontos">
+            <span class="ponto" data-slide="0"></span>
+            <span class="ponto" data-slide="1"></span>
+            <span class="ponto" data-slide="2"></span>
+        </div>
+
     </div>
+    
+    
 
 
-    <script th:src="@{'/js/Pesquisa/HomePage.js'}"></script>
+
+
+
+
+
+
+
+<script th:src="@{'/js/TelaPrincipal.js'}"></script>
+<script th:src="@{'/js/Pesquisa/HomePage.js'}"></script>
+
 </body>
-
 </html>
