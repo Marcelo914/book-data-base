@@ -99,7 +99,7 @@
 
 .background-container {
     width: 100%;
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(170, 150, 121, 0.7);
     height: 270px;
     padding: 1px;
 }
@@ -112,7 +112,7 @@
     margin: auto;
     margin-top: 10px;
     overflow: hidden;
-    background-color: rgb(170, 150, 121, 0.7);
+    background-color: rgb(170, 150, 121);
     height: 250px;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -127,6 +127,19 @@
     padding: 20px;
     box-sizing: border-box;
 }
+
+.carousel-slide:nth-child(1) {
+    background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/91753566621963.Y3JvcCwxMTUzLDkwMiwxMTksMA.png');
+}
+
+.carousel-slide:nth-child(2) {
+    background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/bef783106465203.Y3JvcCwxNDM3LDExMjQsMCw0MTY.png');
+}
+
+.carousel-slide:nth-child(3) {
+    background-image: url('https://i.pinimg.com/originals/e7/b0/aa/e7b0aa6d3545b5d83a5b5d4b8b81ad7c.png');
+}
+
 
 /* Slide visível */
 .active-slide {

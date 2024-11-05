@@ -52,4 +52,9 @@ public class PagesController {
     public String Colecao(){
         return "colecao";
     }
+
+    @GetMapping("/Book")
+    public String Book(){
+        return "book";
+    }
 }

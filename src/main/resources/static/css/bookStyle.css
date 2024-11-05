@@ -1,0 +1,9 @@
+/* Estilos gerais */
+.tela-principal {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #C2AB89;
+    padding-top: 60px;
+    padding-left: 60px;
+}
