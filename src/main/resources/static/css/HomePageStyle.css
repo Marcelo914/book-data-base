@@ -8,95 +8,6 @@
     padding-left: 60px;
 }
 
-/* Estilos da coleção */
-.collection-container {
-    margin-left: 30px;
-    margin-top: 30px;
-    max-width: 95%;
-    padding: 20px;
-    padding-top: 0px;
-    background-color: rgb(170, 150, 121, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Título da categoria */
-.titulo-categoria {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(103, 42, 21, 40%);
-    font-size: 28px;
-    border-radius: 10px 10px 0px 0px;
-    font-weight: bold;
-    color: #ffffff;
-    padding: 5px 20px;
-    margin: 20px 0;
-    margin-left: -20px;
-    margin-right: -20px;
-    text-align: left;
-}
-
-/* Estilo do layout e itens dos livros */
-.book-item {
-    display: flex;
-    gap: 20px;  /* Espaçamento entre os itens */
-    justify-content: space-around;  /* Alinha os itens à esquerda */
-    overflow-x: auto;
-}
-
-.book-item div {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.3s;
-    margin: 10px;
-    display: inline-block; /* Mantém os itens inline */
-}
-
-.book-item div:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para a imagem do livro */
-.book-item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    border-radius: 8px 8px 0 0;
-    cursor: pointer;
-}
-
-/* Título do livro */
-.book-item h3 {
-    font-size: 16px;
-    margin: 10px 0;
-    padding: 0 10px;
-    color: #333;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .collection-container {
-        margin: 50px 10px;
-    }
-
-    .book-item {
-        justify-content: center;
-    }
-
-    .book-item div {
-        width: 120px;
-    }
-}
-
-.maisColecao {
-    width: 120px;
-    border-radius: 15px;
-    background-color: rgb(103, 42, 21, 20%);
-}
-
 .background-container {
     width: 100%;
     background-color: rgb(170, 150, 121, 0.7);
@@ -129,15 +40,15 @@
 }
 
 .carousel-slide:nth-child(1) {
-    background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/91753566621963.Y3JvcCwxMTUzLDkwMiwxMTksMA.png');
+    background-image: url('');
 }
 
 .carousel-slide:nth-child(2) {
-    background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/bef783106465203.Y3JvcCwxNDM3LDExMjQsMCw0MTY.png');
+    background-image: url('');
 }
 
 .carousel-slide:nth-child(3) {
-    background-image: url('https://i.pinimg.com/originals/e7/b0/aa/e7b0aa6d3545b5d83a5b5d4b8b81ad7c.png');
+    background-image: url('');
 }
 
 

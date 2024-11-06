@@ -22,8 +22,24 @@
         <script th:src="@{'/js/layout.js'}"></script>
     </div>
 
+    <div class="container">
+        <div class="book-details">
+            <div class="book-cover">
+                <img id="bookImage" src="" alt="Capa do Livro">
+            </div>
+            <div class="book-info">
+                <h1 id="bookTitle">Título do Livro</h1>
+                <p id="bookAuthor">Autor: Desconhecido</p>
+                <p id="bookPublisher">Editora: Desconhecida</p>
+                <p id="bookPublishedDate">Data de Publicação: -</p>
+                <p id="bookDescription">Descrição: Não disponível.</p>
+                <button class="back-button" onclick="window.history.back()">Voltar</button>
+            </div>
+        </div>
+    </div>
+    
 
 
-
+    <script th:src="@{'/js/bookDetails.js'}"></script>
 </body>
 </html>

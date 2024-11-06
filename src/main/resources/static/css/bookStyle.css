@@ -7,3 +7,55 @@
     padding-top: 60px;
     padding-left: 60px;
 }
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: #C2AB89;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.book-cover img {
+    width: 200px;
+    border-radius: 8px;
+}
+
+.book-info {
+    font-family: Arial, sans-serif;
+    flex: 1;
+    align-content: end;
+}
+
+.book-info h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    font-size: 16px;
+    color: #666;
+    margin: 8px 0;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #596b7e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #3f4e5e;
+}

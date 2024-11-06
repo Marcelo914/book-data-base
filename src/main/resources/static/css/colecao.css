@@ -98,6 +98,8 @@
 }
 
 .maisColecao {
+    margin-top: 10px;
+    height: 323px;
     width: 120px;
     border-radius: 15px;
     background-color: rgb(103, 42, 21, 20%);
