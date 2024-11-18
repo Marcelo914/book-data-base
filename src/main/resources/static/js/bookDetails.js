@@ -1,5 +1,7 @@
 // bookDetails.js
 document.addEventListener("DOMContentLoaded", function () {
+    const q = window.location.href.split('?id=')[1];
+    console.log(q);
     // Simulando dados do livro (substitua esses dados com os que vêm da API)
     const bookData = {
         title: "Harry Potter e a Pedra Filosofal",
