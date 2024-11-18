@@ -1,11 +1,11 @@
 package com.bdb.bookdatabase.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.http.HttpHeaders;
 
 import com.bdb.bookdatabase.Repository.UserRepository;
 import com.bdb.bookdatabase.model.User;
@@ -19,7 +19,7 @@ public class LoginController {
     @PostMapping(value = "/register")
     public ResponseEntity<String> registerUser(User user) {
 
-        if (userRepository.findByEmail(user.getEmail()) != null) {
+        if (userRepository.findByLogin(user.getEmail()) != null) {
             return new ResponseEntity<>("Nome de Usuario já existe", HttpStatus.BAD_REQUEST);
         }
         userRepository.save(user);
@@ -32,7 +32,7 @@ public class LoginController {
 
     @PostMapping(value = "/login")
     public ResponseEntity<String> loginUser(User loginUser) {
-        User user = userRepository.findByEmail(loginUser.getEmail());
+        User user = userRepository.findByLogin(loginUser.getEmail());
 
         if (user == null || !user.getPassword().equals(loginUser.getPassword())) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Email ou senha incorretos");
@@ -40,6 +40,6 @@ public class LoginController {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Location", "/");
-        return new ResponseEntity<>(headers, HttpStatus.FOUND); // Status 302 (FOUND) redireciona para a nova URL
+        return new ResponseEntity<>(headers, HttpStatus.FOUND);
     }
 }

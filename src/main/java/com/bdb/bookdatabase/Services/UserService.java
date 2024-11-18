@@ -15,14 +15,14 @@ public class UserService {
 
     public void saveUser(UserDTO userDto) {
         User user = new User();
-        user.setName(userDto.getName());
+        user.setUsername(userDto.getName());
         user.setEmail(userDto.getEmail());
         user.setPassword(userDto.getPassword());
 
         userRepository.save(user);
     }
 
-    public User findUserById(Long id){
-        return userRepository.findById(id).orElse(null);
+    public com.bdb.bookdatabase.model.User findUserById(Long id){
+        return (User) userRepository.findById(id).orElse(null);
     }
 }
