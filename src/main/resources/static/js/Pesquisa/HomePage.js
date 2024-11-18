@@ -9,6 +9,9 @@ function displayBooks(books) {
     books.forEach(book => {
         const bookItem = document.createElement('div')
         bookItem.classList.add('book-item')
+        bookItem.onclick = () => {
+            // window.location.href = "URL/book/{book.id}"
+        }
 
         const bookTitle = document.createElement('h3')
         bookTitle.textContent = book.volumeInfo.title
