@@ -3,6 +3,9 @@ function displayBooks(books) {
     colecaoContainer.innerHTML = '';
 
     books.forEach(book => {
+        const bookLink = document.createElement('a')
+        bookLink.href = "http://localhost:8080/Book?id=" + book.id;
+
         const bookItem = document.createElement('div')
         bookItem.classList.add('book-item')
 
@@ -17,8 +20,9 @@ function displayBooks(books) {
             bookImage.src = 'default-thumbnail.jpg'
         }
 
-        bookItem.appendChild(bookImage)
-        bookItem.appendChild(bookTitle)
+        bookLink.appendChild(bookImage)
+        bookLink.appendChild(bookTitle)
+        bookItem.appendChild(bookLink)
 
         colecaoContainer.appendChild(bookItem)
     });
