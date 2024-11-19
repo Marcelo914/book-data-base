@@ -74,13 +74,11 @@
 /* Estilos da coleção */
 .collection-container {
     position: relative;
-    width: 60%;
+    width: 70%;
     background-color: #c8a67d;
     border-radius: 0px, 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    left: 35%;
-    
-    
+    left: 25%;
 }
 
 /* Título da categoria */
