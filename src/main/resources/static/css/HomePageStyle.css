@@ -218,11 +218,13 @@
   
   /* Título do livro */
   .book-item h3 {
-      font-size: 16px;
-      margin: 10px 0;
-      padding: 0 10px;
-      color: #333;
-  }
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 0 10px;
+    color: #333;
+    overflow: hidden; /* Para evitar que títulos longos quebrem o layout */
+    text-overflow: ellipsis; /* Adiciona reticências em títulos longos */
+}
   
   /* Responsividade */
   @media (max-width: 768px) {
