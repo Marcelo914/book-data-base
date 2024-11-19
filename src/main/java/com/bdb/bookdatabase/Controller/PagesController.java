@@ -28,11 +28,6 @@ public class PagesController {
         return "tela_principal";
     }
 
-    @GetMapping("/Profile")
-    public String Profile(){
-        return "perfil";
-    }
-
     @GetMapping("/SearchBook")
     public String SearchBook(){
         return "pesquisa_livro";
