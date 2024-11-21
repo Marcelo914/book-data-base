@@ -2,27 +2,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     const q = window.location.href.split('?id=')[1];
     try {
-        fetch('http://localhost:8080/books/' + q)
+        fetch('https://www.googleapis.com/books/v1/volumes/' + q)
             .then(function (response) {
                 response.json()
                     .then(function(x) { 
-                        if (x.title) {
-                            document.getElementById("bookTitle").textContent = x.title;
+                        if (x.volumeInfo.title) {
+                            document.getElementById("bookTitle").textContent = x.volumeInfo.title;
                         }
-                        if (x.author) {
-                            document.getElementById("bookAuthor").textContent = "Autor: " + x.author;
+                        if (x.volumeInfo.authors) {
+                            document.getElementById("bookAuthor").textContent = "Autor: " + x.volumeInfo.authors[0];
                         }
-                        if (x.publisher) {
-                            document.getElementById("bookPublisher").textContent = "Editora: " + x.publisher;
+                        if (x.volumeInfo.publisher) {
+                            document.getElementById("bookPublisher").textContent = "Editora: " + x.volumeInfo.publisher;
                         }
-                        if (x.publishedDate) {
-                            document.getElementById("bookPublishedDate").textContent = "Data de Publicação: " + x.publishedDate;
+                        if (x.volumeInfo.publishedDate) {
+                            document.getElementById("bookPublishedDate").textContent = "Data de Publicação: " + x.volumeInfo.publishedDate;
                         }
-                        if (x.description) {
-                            document.getElementById("bookDescription").textContent = "Descrição: " + x.description;
+                        if (x.volumeInfo.description) {
+                            document.getElementById("bookDescription").textContent = "Descrição: " + x.volumeInfo.description.split(/<[^>]*>/).join('');
                         }
-                        if (x.imageUrl) {
-                            document.getElementById("bookImage").src = x.imageUrl
+                        if (x.volumeInfo.imageLinks.thumbnail) {
+                            document.getElementById("bookImage").src = x.volumeInfo.imageLinks.thumbnail
                         }
                     }) 
             })
