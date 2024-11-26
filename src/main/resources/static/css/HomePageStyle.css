@@ -1,6 +1,6 @@
 /* Estilos gerais */
 .tela-principal {
-    min-height: 100vh;
+    max-height: 50vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #C2AB89;

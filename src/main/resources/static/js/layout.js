@@ -15,4 +15,8 @@ function loadLayout() {
 
 loadLayout();
 
+//Mudar tela inicio 
+function mudarPagina() {
+    window.location.href = "/";
+  }
 
