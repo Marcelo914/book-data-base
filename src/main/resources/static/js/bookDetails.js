@@ -1,6 +1,8 @@
 // bookDetails.js
+const book = {}
 document.addEventListener("DOMContentLoaded", function () {
     const q = window.location.href.split('?id=')[1];
+    book.id = q;
     try {
         fetch('https://www.googleapis.com/books/v1/volumes/' + q)
             .then(function (response) {
@@ -8,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     .then(function(x) { 
                         if (x.volumeInfo.title) {
                             document.getElementById("bookTitle").textContent = x.volumeInfo.title;
+                            book.title = x.volumeInfo.title;
                         }
                         if (x.volumeInfo.authors) {
                             document.getElementById("bookAuthor").textContent = "Autor: " + x.volumeInfo.authors[0];

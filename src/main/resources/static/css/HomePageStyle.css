@@ -93,6 +93,7 @@
     background-color: rgb(194, 171, 137);
     padding-top: 60px;
     padding-left: 90px;
+    display: "flex-container";
   }
   
   #Layer_1 {
