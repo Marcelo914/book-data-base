@@ -33,3 +33,20 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(e)
     }
 });
+
+//POST localhost:8080/books '{"id": "1", "title": "test_post", "comment": [], "libraries": [], "function": []}'
+
+function addBook() {
+    const request = new Request("http://localhost:8080/books", {
+        headers: {
+            "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({ id: book.id, title: book.title, comment: [], libraries: [], function: [] }),
+    });
+    try {
+        fetch(request)
+    } catch(e) {
+        console.log(e);
+    }
+}
