@@ -55,3 +55,5 @@ document.querySelector('.search-button').addEventListener('click', function() {
             console.error('Erro: ', error);
         });
 });
+
+

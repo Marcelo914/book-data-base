@@ -1,6 +1,6 @@
 /* Estilos gerais */
 .tela-principal {
-    min-height: 100vh;
+    max-height: 50vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #C2AB89;
@@ -93,6 +93,7 @@
     background-color: rgb(194, 171, 137);
     padding-top: 60px;
     padding-left: 90px;
+    display: "flex-container";
   }
   
   #Layer_1 {
@@ -159,12 +160,13 @@
   
   /* Estilos da coleção */
   .collection-container {
-      position: relative;
-      width: 70%;
+      position: absolute;
+      width: 60%;
       background-color: #c8a67d;
       border-radius: 0px, 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      left: 25%;
+      right: 3%;
+      top:10%;
   }
   
   /* Título da categoria */

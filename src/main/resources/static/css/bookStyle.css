@@ -1,61 +1,70 @@
 /* Estilos gerais */
 .tela-principal {
-    min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #C2AB89;
     padding-top: 60px;
     padding-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    width: 90%;
     max-width: 900px;
-    background: #C2AB89;
+    background: #d6c3a7; /* Fundo branco */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
     gap: 20px;
 }
 
 .book-cover img {
     width: 200px;
+    max-width: 100%;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .book-info {
-    font-family: Arial, sans-serif;
     flex: 1;
-    align-content: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .book-info h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-top: 15px;
+    font-weight: 600;
 }
 
 .book-info p {
     font-size: 16px;
-    color: #666;
-    margin: 8px 0;
+    color: #0f0f0f;
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 .back-button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     color: white;
-    background-color: #596b7e;
+    background-color: #2c3e50;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
 }
 
 .back-button:hover {
-    background-color: #3f4e5e;
+    background-color: #1a252f;
+    transform: scale(1.05);
 }
