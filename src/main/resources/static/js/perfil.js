@@ -21,7 +21,3 @@ async function userName(id){
     }
 }
 userName(1)
-
-document.getElementById("addBook").addEventListener("click", function() {
-    window.location.href = "AddBook";
-});

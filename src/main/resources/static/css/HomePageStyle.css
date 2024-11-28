@@ -161,17 +161,17 @@
   /* Estilos da coleção */
   .collection-container {
       position: absolute;
-      width: 60%;
+      width: 890px;
       background-color: #c8a67d;
-      border-radius: 0px, 10px;
+      border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      right: 3%;
-      top:10%;
+      right: 1.5%;
+      margin-top: 10px;
+      top: 10%;
   }
   
   /* Título da categoria */
   .titulo-categoria {
-      bottom: 100%;
       width: 100%;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       background-color: rgb(103, 42, 21, 40%);
@@ -180,7 +180,6 @@
       font-weight: bold;
       color: #ffffff;
       padding: 5px 10px;
-      margin: 20px 0px 0px 0px;
       text-align: left;
   }
   
