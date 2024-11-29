@@ -22,7 +22,7 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public com.bdb.bookdatabase.model.User findUserById(Long id){
+    public com.bdb.bookdatabase.model.User findUserById(Long id) {
         return (User) userRepository.findById(id).orElse(null);
     }
 }

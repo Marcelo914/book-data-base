@@ -29,10 +29,7 @@ public class AuthenticationController {
 
         Authentication auth = this.authenticationManager.authenticate(usernamePassword);
 
-       
         return ResponseEntity.ok().build();
     }
 
 }
-
-

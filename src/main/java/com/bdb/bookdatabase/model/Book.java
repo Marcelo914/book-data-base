@@ -1,18 +1,29 @@
 package com.bdb.bookdatabase.model;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table
 public class Book {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String title;
+    private String coverUrl;
+    private String publisher;
+    private String author;
+    private int pages;
+    private String series;
+    private String volume;
+    private String review;
+    private String synopsis;
+    private String tag;
+    private int yearRead;
+    private int rating;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comment = new ArrayList<>();
@@ -23,11 +34,11 @@ public class Book {
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Functions> function = new ArrayList<>();
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -61,5 +72,93 @@ public class Book {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getCoverUrl() {
+        return coverUrl;
+    }
+
+    public void setCoverUrl(String coverUrl) {
+        this.coverUrl = coverUrl;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public int getYearRead() {
+        return yearRead;
+    }
+
+    public void setYearRead(int yearRead) {
+        this.yearRead = yearRead;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getReview() {
+        return review;
+    }
+
+    public void setReview(String review) {
+        this.review = review;
+    }
+
+    public String getSeries() {
+        return series;
+    }
+
+    public void setSeries(String series) {
+        this.series = series;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getVolume() {
+        return volume;
+    }
+
+    public void setVolume(String volume) {
+        this.volume = volume;
     }
 }

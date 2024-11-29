@@ -6,7 +6,6 @@ import com.bdb.bookdatabase.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    User findByLogin(String email);
-
+    User findByEmail(String email);
 
 }

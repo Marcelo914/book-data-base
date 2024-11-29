@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
     // Função para selecionar a capa do livro
     const coverPlaceholder = document.getElementById("cover-placeholder");
+    let coverInput = null; // Variável para armazenar o input de arquivo
+
     coverPlaceholder.addEventListener("click", () => {
-        const input = document.createElement("input");
-        input.type = "file";
-        input.accept = "image/*";
-        input.onchange = (event) => {
+        coverInput = document.createElement("input");
+        coverInput.type = "file";
+        coverInput.accept = "image/*";
+
+        coverInput.onchange = (event) => {
             const file = event.target.files[0];
             if (file) {
                 const reader = new FileReader();
@@ -20,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 reader.readAsDataURL(file);
             }
         };
-        input.click();
-    });
 
+        coverInput.click();
+    });
 
     // Função para avaliação com estrelas
     const stars = document.querySelectorAll(".star");
@@ -48,4 +50,43 @@ document.addEventListener("DOMContentLoaded", () => {
             star.classList.toggle("selected", i <= index);
         });
     }
+
+    const submitButton = document.querySelector(".submit-button");
+    submitButton.addEventListener("click", () => {
+        const bookData = {
+            title: document.getElementById("titulo").value,
+            publisher: document.getElementById("editora").value,
+            author: document.getElementById("autor").value,
+            pages: document.getElementById("paginas").value,
+            series: document.getElementById("serie").value,
+            volume: document.getElementById("volume").value,
+            review: document.getElementById("resenha").value,
+            synopsis: document.getElementById("sinopse").value,
+            tag: document.getElementById("tags").value,
+            yearRead: document.getElementById("anoLido").value,
+            rating: rating,
+        };
+
+        const formData = new FormData();
+        formData.append("book", JSON.stringify(bookData));
+
+        if (coverInput && coverInput.files && coverInput.files.length > 0) {
+            const coverFile = coverInput.files[0];
+            formData.append("cover", coverFile);
+        } else {
+            console.warn("Nenhuma capa foi selecionada.");
+        }
+
+        fetch("/books", {
+            method: "POST",
+            body: formData,
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Book added successfully", data);
+            })
+            .catch(error => {
+                console.error("Failed to add book", error);
+            });
+    });
 });

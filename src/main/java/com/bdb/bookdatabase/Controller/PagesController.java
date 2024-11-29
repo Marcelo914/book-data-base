@@ -24,32 +24,32 @@ public class PagesController {
     }
 
     @GetMapping("/")
-    public String HomePageLogin(){
+    public String HomePageLogin() {
         return "tela_principal";
     }
 
     @GetMapping("/SearchBook")
-    public String SearchBook(){
+    public String SearchBook() {
         return "pesquisa_livro";
     }
 
-    @GetMapping("/Layout") //Página criada para linkar com o JS e aparecer nas telas. NÃO APAGAR!!
-    public String Layout(){
+    @GetMapping("/Layout") // Página criada para linkar com o JS e aparecer nas telas. NÃO APAGAR!!
+    public String Layout() {
         return "layout";
     }
 
     @GetMapping("/AddBook")
-    public String AddBook(){
+    public String AddBook() {
         return "addBook";
     }
 
     @GetMapping("/Coleção")
-    public String Colecao(){
+    public String Colecao() {
         return "colecao";
     }
 
     @GetMapping("/Book")
-    public String Book(){
+    public String Book() {
         return "book";
     }
 }

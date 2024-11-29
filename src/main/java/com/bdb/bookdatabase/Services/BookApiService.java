@@ -24,8 +24,7 @@ public class BookApiService {
 
             return restTemplate.getForObject(url, String.class);
 
-        } else
-{
+        } else {
 
             String url = UriComponentsBuilder.fromHttpUrl(API_URL)
                     .queryParam("q", query)

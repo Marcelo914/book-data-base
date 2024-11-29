@@ -35,4 +35,3 @@ public class SecurityConfiguration {
         return new BCryptPasswordEncoder(); // Algoritmo de hash para senhas
     }
 }
-
