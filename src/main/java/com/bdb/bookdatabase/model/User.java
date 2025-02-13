@@ -71,6 +71,13 @@ public class User implements UserDetails {
         }
     }
 
+    public UserRole getRole() {
+        return role;
+    }
+    public void setRole(UserRole role) {
+        this.role = role;
+    }
+
     public String getName() {
         return name;
     }
@@ -95,6 +102,10 @@ public class User implements UserDetails {
     @Override
     public String getPassword() {
         return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setUsername(String Username) {

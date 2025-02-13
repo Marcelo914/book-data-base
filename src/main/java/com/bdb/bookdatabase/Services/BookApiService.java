@@ -1,5 +1,6 @@
 package com.bdb.bookdatabase.Services;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -7,7 +8,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 @Service
 public class BookApiService {
 
-    private final String API_KEY = "AIzaSyCsaPI3ETOxzfgIp7pV27O-BnvY_QI1-K8";
+    @Value("${apiKey}")
+    private String apiKey;
     private final String API_URL = "https://www.googleapis.com/books/v1/volumes";
     private final RestTemplate restTemplate;
 
@@ -19,7 +21,7 @@ public class BookApiService {
 
         if (query.matches("^[a-zA-Z0-9_-]+$")) {
             String url = UriComponentsBuilder.fromHttpUrl(API_URL + "/" + query)
-                    .queryParam("key", API_KEY)
+                    .queryParam("key", apiKey)
                     .toUriString();
 
             return restTemplate.getForObject(url, String.class);
@@ -28,7 +30,7 @@ public class BookApiService {
 
             String url = UriComponentsBuilder.fromHttpUrl(API_URL)
                     .queryParam("q", query)
-                    .queryParam("key", API_KEY)
+                    .queryParam("key", apiKey)
                     .toUriString();
 
             return restTemplate.getForObject(url, String.class);
